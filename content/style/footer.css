@@ -1,0 +1,14 @@
+footer {
+    border-top: 5px solid var(--primary-bg-color);
+    height: 70px;
+}
+
+footer p {
+    line-height: 70px;
+
+    margin: 0 0 0 40px;
+}
+
+@media (orientation: portrait) {
+    
+}

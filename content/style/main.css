@@ -1,0 +1,207 @@
+main {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    /* background: url('../cgi-bin/bg-index.png') no-repeat fixed center;
+    background-size: cover; */
+
+    padding: 50px 0;
+
+    border-top: 5px solid var(--primary-bg-color);
+
+    height: calc(100% - 88px - 100px - 5px - 75px); /* 100% - nav - padding - top-border - footer */
+}
+
+@media (orientation: portrait) {
+    main {
+        height: auto;
+    }
+}
+
+/* =============================== CARD =============================== */
+
+.card {
+    padding: 32px;
+
+    background-color: var(--secondary-bg-color);
+
+    transition: 500ms;
+
+    text-align: center;
+}
+
+@media (orientation: portrait) {
+    .card[class*="col-"] {
+        width: calc(100% - 64px);
+    }
+}
+
+.card:hover {
+    background-color: var(--primary-bg-color);
+    color: var(--secondary-bg-color);
+}
+
+.card:hover .card-link {
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-bg-color);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.card-desc {
+    font-size: 20pxpx;
+}
+
+.card-link {
+    background-color: var(--primary-bg-color);
+    color: var(--secondary-bg-color);
+
+    padding: 15px;
+    margin: 10px 0 0 0;
+    border-radius: 15px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    transition: 500ms;
+
+    display: inline-block;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/*
+    example:
+    <div class="t-div">fr<span class="t-en">en</span></div>
+*/
+.t-div {
+    text-decoration: underline;
+    text-decoration-style: double;
+
+    position: relative;
+}
+
+.t-en {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+
+    width: auto;
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background-color: lightgray;
+
+    visibility: hidden;
+}
+
+.t-div:hover .t-en {
+    visibility: visible;
+}
+
+/* taken from http://nicolasgallagher.com/pure-css-speech-bubbles/ */
+.t-en:after {
+    content: "";
+    display: block; /* reduce the damage in FF3.0 */
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+    width: 0;
+    border-width: 10px 5px 0;
+    border-style: solid;
+    border-color: lightgray transparent;
+}
+
+#vocab a {
+    font-size: 18px;
+    padding: 15px;
+    text-align: center;
+    display: inline-block;
+}
+
+#vocab p {
+    text-align: center;
+}
+
+.link-center-container {
+    text-align: center;
+}
+
+.area {
+    width: calc(100% - 100px);
+    padding: 50px;
+    background-color: var(--secondary-bg-color);
+
+    transition: 500ms;
+}
+
+.area [class*="col-"] {
+    padding: 15px;
+}
+
+.area:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    z-index: 900;
+
+    transform: translateY(-2px);
+}
+
+.area-muted {
+    width: calc(100% - 100px);
+    padding: 25px 50px;
+}
+
+.intro {
+    font-size: 36px;
+}
+
+iframe.media, video.media {
+    width: 100%;
+    height: 450px;
+
+    border: none;
+}
+
+iframe.media.round {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+p.media {
+    font-size: 20px;
+}
+
+div.img-container {
+    overflow-x: auto;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+table.media {
+    border: 3px solid white;
+    border-radius: 15px;
+}
+
+table.media tbody td {
+    border-top: 3px solid white;
+}
+
+table.media td {
+    padding: 10px 25px;
+}
+
+thead td {
+    font-weight: bold;
+}
+
+td a {
+    text-decoration: underline;
+}
